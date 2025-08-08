@@ -63,8 +63,8 @@ class UserResource extends Resource
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
                         'super_admin' => 'danger',
-                        'admin' => 'success',
-                        'user' => 'gray',
+                        'tenaga_ahli' => 'info',
+                        'penanggung_jawab' => 'primary',
                         default => 'gray',
                     }),
                 Tables\Columns\TextColumn::make('tenaga_ahli')

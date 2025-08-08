@@ -23,6 +23,12 @@ class StatsOverview extends BaseWidget
                 ->descriptionIcon('heroicon-m-archive-box')
                 ->color('info')
                 ->url(route('filament.admin.resources.projects.index')),
+
+            Stat::make('Data Worklog', \App\Models\Worklog::count())
+                ->description('Jumlah Worklog')
+                ->descriptionIcon('heroicon-m-document-text')
+                ->color('warning')
+                ->url(route('filament.admin.resources.worklogs.index')),
             
             Stat::make('System Status', 'Online')
                 ->description('Status sistem')

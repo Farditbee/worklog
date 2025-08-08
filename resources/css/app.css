@@ -9,3 +9,34 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+/* Custom hover effects for dashboard cards */
+.fi-wi-stats-overview-stat,
+[class*="fi-wi-stats"],
+[class*="stats-overview"] > div,
+.filament-stats-overview-widget .filament-stats-card,
+.fi-wi .fi-wi-stats-overview-stat {
+    transition: all 0.3s ease-in-out !important;
+    transform: translateY(0) !important;
+    cursor: pointer !important;
+}
+
+.fi-wi-stats-overview-stat:hover,
+[class*="fi-wi-stats"]:hover,
+[class*="stats-overview"] > div:hover,
+.filament-stats-overview-widget .filament-stats-card:hover,
+.fi-wi .fi-wi-stats-overview-stat:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Alternative approach - target all card-like elements in widgets */
+[data-filament-widget] > div > div {
+    transition: all 0.3s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+[data-filament-widget] > div > div:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
