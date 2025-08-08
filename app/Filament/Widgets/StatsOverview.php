@@ -21,7 +21,7 @@ class StatsOverview extends BaseWidget
             Stat::make('Data Proyek', Project::count())
                 ->description('Jumlah Proyek')
                 ->descriptionIcon('heroicon-m-archive-box')
-                ->color('success')
+                ->color('info')
                 ->url(route('filament.admin.resources.projects.index')),
             
             Stat::make('System Status', 'Online')
