@@ -29,6 +29,12 @@ class StatsOverview extends BaseWidget
                 ->descriptionIcon('heroicon-m-document-text')
                 ->color('warning')
                 ->url(route('filament.admin.resources.worklogs.index')),
+
+            Stat::make('Data Absen', \App\Models\Absen::count())
+                ->description('Jumlah Absen')
+                ->descriptionIcon('heroicon-m-document-text')
+                ->color('warning')
+                ->url(route('filament.admin.resources.absens.index')),
             
             Stat::make('System Status', 'Online')
                 ->description('Status sistem')

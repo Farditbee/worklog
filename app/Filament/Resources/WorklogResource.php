@@ -85,25 +85,11 @@ class WorklogResource extends Resource
                     
                 Tables\Columns\TextColumn::make('sebelum')
                     ->label('Sebelum')
-                    ->limit(50)
-                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
-                        $state = $column->getState();
-                        if (strlen($state) <= 50) {
-                            return null;
-                        }
-                        return $state;
-                    }),
+                    ->wrap(),
                     
                 Tables\Columns\TextColumn::make('sesudah')
                     ->label('Sesudah')
-                    ->limit(50)
-                    ->tooltip(function (Tables\Columns\TextColumn $column): ?string {
-                        $state = $column->getState();
-                        if (strlen($state) <= 50) {
-                            return null;
-                        }
-                        return $state;
-                    }),
+                    ->wrap(),
                     
                 Tables\Columns\ImageColumn::make('file')
                     ->label('Gambar')
